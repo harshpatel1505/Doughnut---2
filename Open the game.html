@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doughnut Collector</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="homepage">
+        <h1>Doughnut Collector</h1>
+        <h2><u>Powered by The Coffee Company</u></h2> 
+        <p>Enter your email to start the game:</p>
+        <input type="email" id="email" placeholder="Enter your email">
+        <button id="startButton">Start</button>
+    </div>
+
+    <div id="game" style="display: none;">
+        <audio autoplay loop>
+            <source src="song.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <div id="score">Score: 0</div>
+        <div id="game-area">
+            <div id="basket"></div>
+        </div>
+    </div>
+
+    <div id="gameOver" style="display: none;">
+        <h1>Game Over</h1>
+    </div>
+
+    <div id="congratulations" style="display: none;">
+        <h1>Congratulations!</h1>
+        <p>You won a free doughnut!</p>
+        <p>Your code is: <span id="code"></span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

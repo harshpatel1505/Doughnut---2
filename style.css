@@ -1,0 +1,120 @@
+body {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  background-image: url("bgg.jpg");
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+}
+
+#homepage,
+#game,
+#gameOver,
+#congratulations {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#homepage h1,
+#game h1,
+#gameOver h1,
+#congratulations h1 {
+  margin-bottom: 10px;
+}
+
+#email {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+#startButton {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#game-area {
+  width: 600px;
+  height: 400px;
+  border: 1px solid #ccc;
+  position: relative;
+  overflow: hidden;
+}
+
+#basket {
+  width: 80px;
+  height: 30px;
+  background-image: url("basket.png");
+  background-size: cover;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.doughnut {
+  width: 40px;
+  height: 40px;
+  background-image: url("donut.png");
+  background-size: cover;
+  position: absolute;
+  animation: fall 1s linear infinite;
+}
+
+.other {
+    width: 30px;
+    height: 30px;
+    background-image: url("bomb.png"); /* Use your image */
+    background-size: cover; /* Make the image cover the element */
+    position: absolute;
+    animation: fall 1s linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.doughnut.explode {
+  animation: explode 0.5s ease-out forwards;
+}
+
+@keyframes explode {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+#score {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 18px;
+  color: white;
+}
